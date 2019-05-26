@@ -1,0 +1,48 @@
+{{ define "signup" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Регистрация</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/menu.css"/>
+    <script type="text/javascript" src="/js/post.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector(".submit").onclick = function() {
+      let login = document.querySelector("input[name='login']").value;
+      let password = document.querySelector("input[name='password']").value;
+      let error = document.querySelector("#error");
+      
+      postRequest("signup_rest", "login=" + login + "&password=" + password, function(req) {
+      if(req.readyState != 4) return;
+
+      if(req.status == 200) {
+      window.location.href = "/index";
+      } else {
+      error.innerHTML = req.responseText;
+      error.style.color = "red";
+      }
+      });
+      }
+      });
+    </script>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" . }}
+      
+      <div class="page-headline">Регистрация</div>
+      <div id="main">
+	<table class="contact-form">
+	  <tr><td>Login</td><td><input type="text" name="login"/></td></tr>
+	  <tr><td>Password</td><td><input type="password" name="password"/></td></tr>
+          <tr><td colspan="2"><button class="submit">OK</button></td></tr>
+          <tr><td colspan="2"><span id="error"></span></td></tr>
+	</table>
+      </div>
+    </div>
+  </body>
+</html>
+{{ end }}

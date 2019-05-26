@@ -1,0 +1,76 @@
+{{ define "editor" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Редактор</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/menu.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/editor.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/presentations.css"/>
+    <script type="text/javascript" src="/js/showdown.min.js"></script>
+    <script type="text/javascript" src="/js/menu.js"></script>
+    <script type="text/javascript" src="/js/post.js"></script>
+    <script type="text/javascript" src="/js/editor.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" .Login }}
+      
+      <div class="page-headline">Редактор</div>
+      <div id="main">
+
+	<div>
+	  <div><span>Название</span><input id="pres-title" type="text"/></div>
+	  <div>
+	    <span>Стиль презентации</span>
+	    <select id="pres-style">
+	      {{ range $ind, $val := .Styles }}
+	      <option value="{{$val}}">Стиль {{ add $ind 1 }}</option>
+	      {{ end }}
+	    </select>
+	  </div>
+	</div>
+	
+	<div id="viewer">
+	  <div class="arrow-btn" id="left-btn"></div>
+	  <div class="arrow-btn" id="right-btn"></div>
+	  <div class="{{index .Styles 0}}" id="viewer-content"></div>
+	</div>
+	
+	<div id="editor">
+	  <div id="editor-edit">
+	    <ul id="editor-menu">
+	      <li data-mcontrol="1">
+		<ul data-menu="1">
+		  <li onclick="add_header(2);">H</li>
+		  <li onclick="add_header(3);">H</li>
+		  <li onclick="add_header(4);">H</li>
+		</ul>
+	      </li>
+	      <li onclick="add_bold();"></li>
+	      <li onclick="add_italic();"></li>
+	      <li onclick="add_underline();"></li>
+	      <li onclick="add_strike();"></li>
+	      <li onclick="add_link();"></li>
+	      <li onclick="add_ul();"></li>
+	      <li onclick="add_ol();"></li>
+	      <li onclick="add_image();"></li>
+	      <li onclick="add_center();"></li>
+	      <li onclick="add_slide();"></li>
+	    </ul>
+	    <textarea id="editor-textarea"></textarea>
+	  </div>
+	</div>
+
+	<button id="view-btn">Предпросмотр</button>
+	<button id="send-btn">Создать</button>
+	<div id="error"></div>
+      </div>
+      
+    </div>
+  </body>
+</html>
+{{ end }}

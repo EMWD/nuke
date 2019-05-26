@@ -1,0 +1,24 @@
+{{ define "auth_required" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ошибка авторизации</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      {{ template "menu" }}
+      <div class="page-headline">Ошибка авторизации</div>
+      <div id="main">
+	<div id="content">
+	  <div class="post">
+	    <p>{{.}}</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
+{{ end }}

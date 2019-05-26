@@ -1,0 +1,33 @@
+{{ define "showPresentation" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Презентация</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/menu.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/editor.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/presentations.css"/>
+    <script type="text/javascript" src="/js/post.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/showdown.min.js"></script>
+    <script type="text/javascript" src="/js/show.js"></script>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" . }}
+      
+      <div class="page-headline">Презентация</div>
+      <div id="main">
+	<div id="viewer">
+	  <div class="arrow-btn" id="left-btn"></div>
+	  <div class="arrow-btn" id="right-btn"></div>
+	  <div id="viewer-content">
+	  </div>
+	</div>
+      </div>
+
+  </body>
+</html>
+{{ end }}

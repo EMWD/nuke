@@ -1,0 +1,76 @@
+{{ define "index" }}
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" . }}
+      
+      <div class="page-headline">Главная</div>
+      <div id="main">
+
+	<div>
+          <h2>Добро пожаловать на NUKE</h2>
+          <p>Наш сервис предоставляет пользовательям возможность создавать презентации в markdown формате и управлять их показом через мобильное устройство</p>
+	</div>
+
+	<ol id="abilities">
+	  <li>Создай презентацию</li>
+	  <li>Активируй сессию просмотра</li>
+	  <li>Открой сессию на компьютере</li>
+	  <li>Открой сессию на мобильном устройстве</li>
+	  <li>Управляй показом презентации с телефоном</li>
+	</ol>
+  </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      {{ template "menu" . }}
+      <div class="page-headline">Главная</div>
+      
+      <div class = 'container-general-1'>
+        
+	<div class="box-general-1">
+          <h2 class = 'h-gen-1'>Добро пожаловать на NUKE</h2>
+          <p>Наш сервис предоставляет пользовательям возможность менять и редактировать текста в стиле WYSIWYG</p>
+	</div>
+
+	<div class="box-general-2">
+          <h3>Загружайся с телефона</h3>
+	</div>
+
+	<div class="box-general-3">
+          <h3>Добавь свою презентацию</h3>
+	</div>
+
+	<div class="box-general-4">
+          <h3>Настрой и отредактируй</h3>
+	</div>
+
+
+	<div class="box-general-5">
+          <h3><a href="signup" class = "hreff" >Начать</a></h3>
+	</div>
+
+      </div>
+    </div>
+  </body>
+</html>
+{{ end }}

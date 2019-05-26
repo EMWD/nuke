@@ -1,0 +1,54 @@
+{{ define "profile" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Профиль</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/menu.css"/>
+    <style>@import "/css/themify.css";</style>
+    <script type="text/javascript" src="/js/post.js"></script>
+    <script type="text/javascript" src="/js/profile.js"></script>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" .Login }}
+      
+      <div class="page-headline">Профиль</div>
+      <div id="main">
+	<h3>Сменить пароль</h3>
+	<div>
+	  <table class="contact-form">
+	    <tr><td>Старый пароль</td><td><input id="old-password" type="password"/></td></tr>
+	    <tr><td>Новый пароль</td><td><input id="new-password" type="password"/></td></tr>
+	    <tr><td colspan="2"><button id="change-pass-btn" class="submit">OK</button></td></tr>
+	    <tr><td colspan="2"><span id="change-error"></span></td></tr>
+	  </table>
+	</div>
+	
+	<h3>Удалить аккаунт</h3>
+	<div>
+	  <table class="contact-form">
+	    <tr><td>Пароль</td><td><input id="del-password" type="password"/></td></tr>
+	    <tr><td colspan="2"><button id="del-btn" class="submit">OK</button></td></tr>
+	    <tr><td colspan="2"><span id="del-error"></span></td></tr>
+	  </table>
+	</div>
+	
+	<div id="presentations">
+	  {{ range $ind, $val := .Presentations }}
+	  <h3>Презентации:</h3>
+	  <div data-title="{{$val}}" class="presentation">
+	    <span onclick="delPresentation({{$ind}});"></span>
+	    <span onclick="editPresentation({{$.Login}}, {{$ind}});"></span>
+	    <span onclick="showPresentation({{$.Login}}, {{$val}});"></span>
+	    <span></span>
+	    <div>{{.}}</div>
+	  </div>
+	  {{ end }}
+	</div>
+      </div>
+  </body>
+</html>
+{{ end }}

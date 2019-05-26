@@ -1,0 +1,31 @@
+{{ define "review" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Отзывы</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/menu.css"/>
+    <style>
+      #send-fld { width: 960px; min-height: 300px; }
+    </style>
+  </head>
+  <body class="page">
+    <div id="wrap">
+      
+      {{ template "menu" . }}
+      
+      <div class="page-headline">Оставить отзыв</div>
+      <div id="main">
+
+	<div>
+	  <p>Отзыв:</p>
+	  <textarea id="send-fld"></textarea>
+	</div>
+	<div><button id="send-btn">Отправить</button></div>
+      </div>
+
+    </div>
+  </body>
+</html>
+{{ end }}

@@ -1,0 +1,191 @@
+@import url("/css/themify.css");
+
+#editor {
+    width: 100%;
+    min-height: 20vh;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+}
+
+.editor-active {
+    color: #2684cd !important;
+}
+
+#editor-tabs {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#editor-tabs > li {
+    padding: 0.5em;
+    border: 1px solid transparent;
+    border-right: 1px solid #d9d9d9;
+    cursor: pointer;
+    
+}
+
+#editor-tabs > li:hover {
+    border-bottom: 1px solid #2684cd;
+}
+
+#editor textarea {
+    border: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20vh;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+#editor-tabs > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+#editor-menu {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0.25em;
+}
+
+#editor-menu > li > ul {
+    position: absolute;
+    background: #5f5f5f;
+    padding: 0.5em;
+    border-radius: 0.35em;
+}
+
+#editor-menu > li > ul > li {
+    display: inline-block;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+#editor-menu > li > ul > li:hover {
+    color: #65d0ff !important;
+}
+
+#editor-menu > li {
+    font-size: 14pt;
+    margin-right: 1em;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+}
+
+#editor-menu > li:hover {
+    color: #2684cd;
+}
+
+#editor-menu > li:nth-child(1):before {
+    content: "H";
+}
+
+#editor-menu > li:nth-child(2):before {
+    content: "B";
+    font-weight: bold;
+}
+
+#editor-menu > li:nth-child(3):before {
+    content: "I";
+    font-style: italic;
+}
+
+#editor-menu > li:nth-child(4):before {
+    content: "U";
+    text-decoration: underline;
+}
+
+#editor-menu > li:nth-child(5):before {
+    content: "S";
+    text-decoration: line-through;
+}
+
+#editor-menu > li:nth-child(6):before {
+    font-family: "themify";
+    content: "\e62d";
+}
+
+#editor-menu > li:nth-child(7):before {
+    font-family: "themify";
+    content: "\e694";
+}
+
+#editor-menu > li:nth-child(8):before {
+    font-family: "themify";
+    content: "\e734";
+}
+
+#editor-menu > li:nth-child(9):before {
+    font-family: "themify";
+    content: "\e633";
+}
+
+#editor-menu > li:nth-child(10):before {
+    font-family: "themify";
+    content: "\e6c4";
+}
+
+#editor-menu > li:nth-child(11):before {
+    font-family: "themify";
+    content: "\e6a4";
+}
+
+ul[data-menu='1'] > li:nth-child(1) {
+    font-size: 14pt;
+}
+
+ul[data-menu='1'] > li:nth-child(2) {
+    font-size: 12pt;
+}
+
+ul[data-menu='1'] > li:nth-child(3) {
+    font-size: 10pt;
+}
+
+#viewer {
+    border: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+    min-height: 500px;
+    max-height: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.arrow-btn:before {
+    position: absolute;
+    height: 1em;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    cursor: pointer;
+    font-family: "themify";
+}
+
+#left-btn:before {
+    content: "\e64a";
+    left: -1em;
+}
+
+#right-btn:before {
+    content: "\e649";
+    right: -1em;
+}
+
+#viewer strong {
+    font-weight: bold;
+}
+
+#viewer em {
+    font-style: italic;
+}
+
+#viewer ul li {
+    list-style-type: disc;
+}
+
+#viewer ol li {
+    list-style-type: decimal;
+}
+
+#view-btn, #send-btn {
+    width: 100%;
+}

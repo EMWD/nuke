@@ -1,0 +1,23 @@
+#viewer-content span {
+    display: block;
+    text-align: center;
+}
+
+.style1 h2 {
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background: #3333b2;
+    color: #fff;
+}
+
+.style1 .pres-footer {
+    position: absolute;
+    bottom: 0px;
+    background: #3333b2;
+    width: 100%;
+    color: #fff;
+    padding: 0.125em;
+    box-sizing: border-box;
+    font-weight: bold;
+}

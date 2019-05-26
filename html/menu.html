@@ -1,0 +1,19 @@
+{{ define "menu" }}
+<div id="header"> <img src="images/logo.svg" width="100px"/>
+  <div id="nav">
+    <ul class="menu">
+      <li><a href="index">Главная</a></li>
+      <li><a href="editor">Добавить</a></li>
+      <li><a href="profile">Профиль</a></li>
+      <li><a href="review">Отзывы</a></li>
+      <li><a href="donate">Поддержать</a></li>
+      {{ with . }}
+      <li><a href="exit">Выход</a></li>
+      {{ else }}
+      <li><a href="signup">Регистрация</a></li>
+      <li><a href="signin">Вход</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

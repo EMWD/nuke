@@ -1,0 +1,273 @@
+@import "reset.css";
+
+#wrap{
+    width:960px;
+    margin:0 auto;
+}
+
+body{
+    font-family:arial, sans-serif;
+    background-color:#fff;
+    color:#555;
+    line-height:24px;
+    font-size:14px;
+    overflow-x: hidden;
+}
+h1{
+    font-size:38px;
+    margin:0 0 30px 0;
+}
+h2{
+    font-size:28px;
+    margin:40px 0 30px 0;
+}
+h3{
+    font-size:24px;
+    margin:40px 0 20px 0;
+}
+h4{
+    font-size:18px;
+    margin:30px 0 15px 0;
+}
+h5{
+    font-size:18px;
+    margin:30px 0 5px 0;
+}
+p{
+    margin:0 0 15px 0;
+}
+a{
+    text-decoration:none;
+    color:#2684cd;
+}
+a:hover{
+    color:#555;
+    cursor:pointer;
+}
+.home{
+    background:url(../images/home-bg.png) repeat-x;
+}
+.page{
+    background:url(../images/page-bg.png) repeat-x;
+}
+.hide{
+    display:none;
+}
+.title{
+    margin-top:0;
+}
+.post-line{
+    clear:both;
+    border-bottom:1px #ddd dotted;
+    margin:40px 0 45px 0;
+}
+.cache-images{
+    display:none
+}
+/* ------------ */
+/* -- Header -- */
+/* ------------ */
+#header{
+    height:150px;
+    padding:45px 0 0 0;
+}
+#header img, #header h1{
+    float:left;
+}
+#header h1{
+    font-size:50px;
+    margin:32px 0 0 5px;
+}
+/* ------------- */
+/* -- Content -- */
+/* ------------- */
+#main{
+    float:left;
+    margin:90px 0 50px 0;
+    width:100%;
+}
+#content{
+    float:left;
+    width:480px;
+    padding:0 165px 0 0;
+}
+/* ---------- */
+/* -- Page -- */
+/* ---------- */
+.page-headline{
+    font-size:36px;
+    margin:-5px 0 0 0;
+}
+/* ------------------ */
+/* -- Contact Form -- */
+/* ------------------ */
+.contact-form .submit {
+    width: 100%;
+}
+
+#abilities {
+    list-style-type: decimal;
+    margin-left: 18px;
+}
+
+.presentation {
+    position: relative;
+    width: 100px;
+}
+
+.presentation div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 0.35em;
+    background: #e1e2da;
+    text-align: center;
+    line-height: 100px;
+    color: #6d6d6d;
+}
+
+.presentation span:nth-child(1):before {
+    font-family: "themify";
+    content: "\e646";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.presentation span:nth-child(2):before {
+    font-family: "themify";
+    content: "\e61c";
+    position: absolute;
+    right: 1.4em;
+    top: 0px;
+    cursor: pointer;
+}
+
+.presentation span:nth-child(3):before {
+    font-family: "themify";
+    content: "\e633";
+    position: absolute;
+    right: 2.8em;
+    top: 0px;
+    cursor: pointer;
+}
+
+.presentation span:nth-child(4):before {
+    font-family: "themify";
+    content: "\e62d";
+    position: absolute;
+    right: 4.2em;
+    top: 0px;
+    cursor: pointer;
+}
+
+.box-1{
+    flex:1;
+
+}
+.box-2{
+    flex:1;
+    
+}
+
+
+.container-don-1{
+    display: flex;
+    margin: 8% 10%;
+}
+
+.box-don-1{
+    flex:1;
+
+}
+.box-don-2{
+    flex:1;
+    
+}
+
+.container-don-2{
+    display: flex;
+    margin: 0% 25%;
+}
+
+.box-don-3{
+    flex:1;
+
+}
+.box-don-4{
+    flex:1;
+}
+
+.container-don-3{
+    display: flex;
+    margin: 0% 10%;
+}
+
+.box-don-5{
+    margin: 0% 10%;
+    flex:1;
+
+}
+
+.h-gen-1{
+    padding-top: 7%;
+    padding-left: 17%
+}
+
+.container-general-1{
+    display: flex;
+    margin: 0% 5%;
+    flex-direction: column;
+}
+
+.box-general-1{
+    flex:1;
+    padding-left: 10%;
+}
+.box-general-2{
+    padding-left: 30%;
+    flex:1;
+}
+
+.box-general-3{
+    flex:1;
+    padding-left: 30%;
+}
+.box-general-4{
+    flex:1;
+    padding-left: 30%;
+}
+.box-general-5{
+    flex:1;
+    padding-top: 6%;
+    padding-left: 40%;
+}
+
+.hreff {
+    border: 2px solid #414A4E; 
+    display: inline-block;
+    padding: 5px 15px; /* Поля */
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #414A4E; /* Цвет текста */
+}
+.hreff:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Тень */
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce); /* Градиент */
+    color: #508FC2;
+}
+.footer{
+    text-align: center;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0px;
+    float:left;
+    border-color: #414A4E;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px; 
+    margin:20px 0 0 0;
+    padding:15px 0 15px 0;
+    width:100%;
+    background-color: #F3EFE3;
+}
